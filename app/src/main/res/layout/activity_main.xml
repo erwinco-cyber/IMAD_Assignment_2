@@ -42,22 +42,23 @@
         android:id="@+id/txtAllQuestions"
         android:layout_width="384dp"
         android:layout_height="324dp"
+        android:layout_marginBottom="64dp"
         android:text="Score"
         android:textAlignment="viewStart"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="172dp" />
+        app:layout_constraintBottom_toTopOf="@+id/btnShowQuestions"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/txtReward"
         android:layout_width="290dp"
         android:layout_height="46dp"
         android:layout_marginStart="34dp"
-        android:layout_marginTop="284dp"
+        android:layout_marginTop="272dp"
         android:layout_marginEnd="41dp"
         android:text="Score"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -68,11 +69,14 @@
         android:id="@+id/txtQuestion"
         android:layout_width="384dp"
         android:layout_height="128dp"
+        android:layout_marginStart="7dp"
         android:text="Sample Question"
-        android:textSize="30sp"
+        android:textSize="20sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="56dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtAllQuestions"
+        app:layout_constraintTop_toBottomOf="@+id/txtWelcome" />
 
     <Button
         android:id="@+id/btnShowQuestions"
@@ -88,87 +92,72 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnMyth"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNext" />
+        app:layout_constraintTop_toBottomOf="@+id/btnNext"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btnMyth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="91dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="47dp"
+        android:layout_marginBottom="60dp"
         android:text="Myth"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnResults"
+        app:layout_constraintBottom_toTopOf="@+id/btnNext"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnShowQuestions"
-        app:layout_constraintTop_toBottomOf="@+id/txtQuestion" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtAllQuestions" />
 
     <Button
         android:id="@+id/btnResults"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="183dp"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="55dp"
-        android:layout_marginBottom="84dp"
+        android:layout_marginStart="119dp"
+        android:layout_marginEnd="119dp"
+        android:layout_marginBottom="64dp"
         android:text="Show Results"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnShowQuestions" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginEnd="105dp"
-        android:layout_marginBottom="9dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="36dp"
         android:text="Next Question"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnShowQuestions"
-        app:layout_constraintEnd_toStartOf="@+id/btnMyth"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtQuestion" />
+        app:layout_constraintBottom_toTopOf="@+id/btnResults"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btnReset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="183dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="127dp"
-        android:layout_marginBottom="57dp"
+        android:layout_marginStart="49dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="49dp"
         android:text="Reset"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnShowQuestions"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtQuestion" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/txtAllQuestions"
+        app:layout_constraintTop_toBottomOf="@+id/txtReward" />
 
     <Button
         android:id="@+id/btnHack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="78dp"
-        android:layout_marginTop="79dp"
-        android:layout_marginEnd="238dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="144dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="308dp"
+        android:layout_marginEnd="240dp"
         android:text="Hack"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnShowQuestions"
-        app:layout_constraintVertical_bias="0.846" />
+        app:layout_constraintTop_toBottomOf="@+id/txtWelcome" />
 </androidx.constraintlayout.widget.ConstraintLayout>
