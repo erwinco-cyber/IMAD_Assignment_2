@@ -123,8 +123,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btnShowNextQuestion.setOnClickListener {
-            btnHack.isEnabled = true
             btnMyth.isEnabled = true
+            btnHack.isEnabled = true
             currentQuestion++
             btnShowQuestions.performClick()
         }
